@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #nav {
@@ -36,4 +37,16 @@ body {
 #nav a {
 	color: #fff;
 	text-decoration: none;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+#order-form {
+    font-size: 20px;
 }

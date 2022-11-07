@@ -12,7 +12,7 @@
 <body>
 
 <div id="nav">
-	<div class="container">
+	<div>
 		<h2>Title</h2>
 		<ul>
 			<li><a href="#">Link</a></li>
@@ -22,30 +22,36 @@
 	</div>
 </div>
 
-<form method="POST" action="">
+<div class="container">
+  <form method="POST" action="" id="order-form">
 
-  <label for="date">Datum</label><br>
-  <input type="date" id="date" name="date" value=""><br><br>
+    <label for="date">Datum</label><br>
+    <input type="date" id="date" name="date" value=""><br><br>
   
-  <label for="time">Tid</label><br>
-  <input type="time" id="time" name="time" value=""><br><br>
+    <label for="time">Tid</label><br>
+    <input type="time" id="time" name="time" value=""><br><br>
   
-  <input type="radio" id="Klassisk" name="massage-type" value="Klassisk">
-  <label for="Klassisk">Klassisk</label><br>
-  <input type="radio" id="Sportmassage" name="massage-type" value="Sportmassage">
-  <label for="Sportmassage">Sportmassage</label><br>
-  <input type="radio" id="Fysioterapi" name="massage-type" value="Fysioterapi">
-  <label for="Fysioterapi">Fysioterapi</label> <br><br>
+    <input type="radio" id="Klassisk" name="massage-type" value="Klassisk">
+    <label for="Klassisk">Klassisk</label><br>
+    <input type="radio" id="Sportmassage" name="massage-type" value="Sportmassage">
+    <label for="Sportmassage">Sportmassage</label><br>
+    <input type="radio" id="Fysioterapi" name="massage-type" value="Fysioterapi">
+    <label for="Fysioterapi">Fysioterapi</label> <br><br>
   
-  <label for="name">Namn</label><br>
-  <input type="text" id="name" name="name" value=""><br><br>
+    <label for="name">Namn</label><br>
+    <input type="text" id="name" name="name" value=""><br><br>
 
-  <label for="phonenumber">Telefonnummer</label><br>
-  <input type="text" id="phonenumber" name="phonenumber" value=""><br><br>
+    <label for="phonenumber">Telefonnummer</label><br>
+    <input type="text" id="phonenumber" name="phonenumber" value=""><br><br>
   
-  <input type="submit" name="form-submit" value="Submit">
+    <input type="submit" name="form-submit" value="Submit">
 
-</form> 
+  </form> 
+</div>
+
+<div id="footer">
+
+</div>
 <?php
 
 include 'config.php';
