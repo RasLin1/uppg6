@@ -23,7 +23,7 @@
   <input type="radio" id="Sportmassage" name="massage-type" value="Sportmassage">
   <label for="Sportmassage">Sportmassage</label><br>
   <input type="radio" id="Fysioterapi" name="massage-type" value="Fysioterapi">
-  <label for="Fysioterapi">Fysioterapi</label>
+  <label for="Fysioterapi">Fysioterapi</label> <br><br>
   
   <label for="name">Namn</label><br>
   <input type="text" id="name" name="name" value=""><br><br>
@@ -36,7 +36,7 @@
 </form> 
 <?php
 
-include 'includes/config.php';
+include 'config.php';
 
 //tar bort skadlig kod samt stoppar att script inte körs
 function cleanInput ($data){
@@ -67,11 +67,11 @@ if (empty($_POST["phonenumber"])){
 }
 		
 if(isset($_POST['form-submit'])){
-	$Fornamn2 = cleanInput($_POST['fornamn2']);
-	$Efternamn = cleanInput($_POST['efternamn']);
-	$Older = cleanInput($_POST['older']);
-	$Stad = cleanInput($_POST['stad']);
-	$Postnummer = cleanInput($_POST['postnummer']);
+  $date = cleanInput($_POST['date']);
+  $time = cleanInput($_POST['time']);
+  $massageType = cleanInput($_POST['massage-type']);
+	$name = cleanInput($_POST['name']);
+	$phonenumber = cleanInput($_POST['phonenumber']);
 	
 	
 	
@@ -80,12 +80,19 @@ if(isset($nameErr)){
 }
 
 else{
-echo $Fornamn2 . "<br>";
-echo $Efternamn . "<br>";
-echo $Older . "<br>";
-echo $Stad . "<br>";
-echo $Postnummer . "<br>";
 
+
+if($conn->query("INSERT INTO massagetimes(mas_date, mas_time, mas_type, customer_name, customer_phone)values('$date', '$time', '$massageType', '$name', '$phonenumber')")){
+	echo "Order created successfully";
+	echo "<a href='index.php'>Return</a>";
+
+}
+else{
+	echo "error";
+	echo "<a href='form.php'>Return</a>";
+}
+}
+}
 ?>
 </body>
 </html>
