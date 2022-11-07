@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Programmering - Audio Player</title>
-<!-- Set charset to allow ÅÄÖ -->
-<meta charset="UTF-8">
+  <title>Programmering - Audio Player</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Set charset to allow ÅÄÖ -->
+  <meta charset="UTF-8">
 
-<!-- Set viewport to make responsive design possible -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set viewport to make responsive design possible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<div id="nav">
+	<div class="container">
+		<h2>Title</h2>
+		<ul>
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+		</ul>
+	</div>
+</div>
 
 <form method="POST" action="">
 
