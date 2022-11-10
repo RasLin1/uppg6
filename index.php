@@ -109,6 +109,6 @@ else{
 }
 }
 }
+include 'footer.php';
 ?>
-</body>
 </html>

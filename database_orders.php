@@ -11,17 +11,9 @@
 </head>
 <body>
 
-<div id="nav">
-	<div>
-		<h2>Kund Beställningar</h2>
-		<ul>
-			<li><a href="index.php">Framsida</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-		</ul>
-	</div>
-</div>
-
+<?php
+include 'header.php';
+?>
 
 
 <div class="container">
@@ -42,3 +34,7 @@ $queryResult = $conn->query("SELECT * FROM massagetimes");
 		}
 ?>
 </div>
+<?php
+include 'footer.php';
+?>
+</html>
