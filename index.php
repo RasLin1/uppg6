@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Programmering - Audio Player</title>
+  <title>Massage Formulär</title>
   <link rel="stylesheet" href="css/style.css">
   <!-- Set charset to allow ÅÄÖ -->
   <meta charset="UTF-8">
@@ -13,9 +13,9 @@
 
 <div id="nav">
 	<div>
-		<h2>Title</h2>
+		<h2>Massage Formulär</h2>
 		<ul>
-			<li><a href="#">Link</a></li>
+			<li><a href="database_orders.php">Kund Beställningar</a></li>
 			<li><a href="#">Link</a></li>
 			<li><a href="#">Link</a></li>
 		</ul>
@@ -102,12 +102,10 @@ else{
 
 if($conn->query("INSERT INTO massagetimes(mas_date, mas_time, mas_type, customer_name, customer_phone)values('$date', '$time', '$massageType', '$name', '$phonenumber')")){
 	echo "Order created successfully";
-	echo "<a href='index.php'>Return</a>";
 
 }
 else{
 	echo "error";
-	echo "<a href='form.php'>Return</a>";
 }
 }
 }
